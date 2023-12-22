@@ -1,0 +1,103 @@
+/*HEADER START*/
+
+.header{
+    position: relative;
+    flex-shrink: 0;
+    &-row{
+        display: flex;
+        align-items: center;
+        padding: 20px 0px 12px 10px;
+    }
+    &-logo{
+        margin-right: 72px;
+       
+    }
+    &-logo img{
+        @include media(375) {
+            width: 59px;
+            height: 45px;
+            // background-size: cover;
+        }
+       
+    }
+    &-nav{
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+    }
+    &-link{
+    color:#121212;
+    font-family:$font-comfort;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        color:red;
+    }
+    }
+    &-link:not(:last-child){
+        margin-right: 40px;
+    }
+    
+    &-social{
+    display: flex;
+    align-items: center;
+    margin-right:14px ;
+    }
+    &-map{
+    margin: 0 10px;
+    color: var(--black, #121212);
+    font-family: $font-comfort;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: normal;
+    }
+    &-contact{
+        display: flex;
+        align-items: center;
+        margin-right: 36px;
+        &-text{
+        color: var(--black, #121212);
+        font-family: $font-montserrat;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: 10px;   
+        }
+    }
+    &-profile{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    &-mobile{
+        display: none;
+    }
+  @include media(375) {
+
+        &-row{
+            padding: 22px 15px 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-nav{
+            display: none;
+        }
+        &-social{
+            display: none;
+        }
+        &-contact{
+            display: none;
+        }
+        &-mobile{
+            display: block;
+            margin-left: 20px;
+        }
+        
+    }
+}
+
+/*HEADER - END*/
